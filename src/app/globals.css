@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1c6b62;
+  --color-primary-hover: #15564f;
+  --color-primary-soft: #e3efec;
+  --color-ink: #172f35;
+  --color-hero: #122a30;
+  --color-hero-deep: #0d2126;
+  --color-cream: #f8f6f1;
+  --color-surface: #ffffff;
+  --color-accent: #d88b63;
+  --color-accent-soft: #f7e8dc;
+  --color-body: #41555a;
+  --color-muted: #6e7d7e;
+  --color-line: #e3e7e2;
+  --font-sans: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+  --radius-card: 1.25rem;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-ink);
+  line-height: 1.6;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+::selection {
+  background: #1c6b62;
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 3px solid #1c6b62;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+.card-shadow {
+  box-shadow: 0 1px 2px rgb(23 47 53 / 0.05), 0 12px 32px -16px rgb(23 47 53 / 0.18);
+}
+.card-shadow:hover {
+  box-shadow: 0 2px 4px rgb(23 47 53 / 0.06), 0 20px 44px -18px rgb(23 47 53 / 0.24);
+}
+
+.hero-pattern {
+  background-image: radial-gradient(rgb(255 255 255 / 0.09) 1.2px, transparent 1.2px);
+  background-size: 26px 26px;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgb(28 107 98 / 0.16) 1.3px, transparent 1.3px);
+  background-size: 22px 22px;
+}
